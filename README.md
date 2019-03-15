@@ -1,2 +1,47 @@
-# cryptocurrency
+# Cryptocurrency package
+
+[![License][ico-license]][link-license]
+[![Requires PHP7.0][ico-php]][link-php]
+
 All cryptocurrencies infos in a single package without using a database.
+
+## Changelog
+
+Please see the [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+
+## Contributing
+
+Your help is always welcome! Feel free to open issues, ask questions, talk about it and discuss this tool.  
+Of course there are some [contributing guidelines](CONTRIBUTING.md) and a [code of conduct](CODE_OF_CONDUCT.md), which I invite you to check out.  
+For all other contributions, see below.
+
+## Security
+
+The `CryptoTech\Cryptocurrency` package will be checked for security vulnerabilities using [Roave Security Advisories][link-roave] checker.
+If you discover any security related issues, please email [security@cryptotech.srl](mailto:security@cryptotech.srl) instead of using the issue tracker.
+
+## Credits
+
+- [Crypto Technology srl][link-author]
+- [Luca Bognolo][link-coauthor]
+- [All Contributors][link-contributors]
+
+## Versioning
+We use [SemVer][link-semver] for versioning. For the versions available, see [the tags][link-tags] on this repository.
+
+## License
+
+The GNU General Public License version 3. Please see the [license file](LICENSE) for more information.
+This work [is licensed](LICENSE) under the [GNU GPL v3][link-license].
+
+[ico-license]: https://img.shields.io/github/license/crypto-technology/cryptocurrency.svg?style=flat-square
+[ico-php]: https://img.shields.io/badge/php-7.0-red.svg?style=flat-square
+
+[link-license]: https://www.gnu.org/licenses/gpl-3.0.en.html
+[link-php]: https://secure.php.net/downloads.php
+[link-roave]: https://github.com/Roave/SecurityAdvisories
+[link-author]: https://cryptotech.srl
+[link-coauthor]: https://bogny.eu
+[link-contributors]: https://github.com/crypto-technology/cryptocurrency/contributors
+[link-semver]: https://semver.org/
+[link-tags]: https://github.com/crypto-technology/cryptocurrency/tags

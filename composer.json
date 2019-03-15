@@ -1,0 +1,58 @@
+{
+    "name": "crypto-technology/cryptocurrency",
+    "type": "library",
+    "description": "All cryptocurrencies infos in a single package without using a database.",
+    "license": "GPL-3.0",
+    "homepage": "https://cryptotech.srl",
+    "authors": [
+        {
+            "name": "Crypto Technology srl",
+            "email": "admin@cryptotech.srl",
+            "homepage": "https://cryptotech.srl",
+            "role": "Developer"
+        },
+        {
+            "name": "Luca Bognolo",
+            "email": "admin@bogny.eu",
+            "homepage": "https://bogny.eu",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "git@cryptotech.srl",
+        "issues": "https://github.com/crypto-technology/cryptocurrency/issues",
+        "wiki": "https://github.com/crypto-technology/cryptocurrency/wiki",
+        "source": "https://github.com/crypto-technology/cryptocurrency"
+    },
+    "require": {
+        "php": "~7.0|~7.1|~7.2|~7.3",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.14",
+        "phpunit/phpunit": "^7.5",
+        "roave/security-advisories": "master@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "CryptoTech\\Cryptocurrency\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CryptoTech\\Cryptocurrency\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "php-cs-fixer": "vendor/bin/php-cs-fixer fix ."
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
