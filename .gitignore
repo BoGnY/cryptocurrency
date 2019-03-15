@@ -160,6 +160,11 @@ $RECYCLE.BIN/
 
 .php_cs
 .php_cs.cache
+phpunit.xml
+!phpunit.xml.dist
 
 # Exclude backups dir
 backup/
+
+# Others
+.phpunit.result.cache

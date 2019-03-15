@@ -30,5 +30,6 @@ return [
     'crypto_enabled' => [
         'Bitcoin',
         'Ethereum',
+        'Ripple',
     ],
 ];
