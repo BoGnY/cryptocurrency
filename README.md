@@ -1,7 +1,8 @@
 # Cryptocurrency package
 
+[![Build Status][ico-travis]][link-travis]
 [![License][ico-license]][link-license]
-[![Requires PHP7.0][ico-php]][link-php]
+[![Requires PHP7.1][ico-php]][link-php]
 
 All cryptocurrencies infos in a single package without using a database.
 
@@ -98,9 +99,11 @@ We use [SemVer][link-semver] for versioning. For the versions available, see [th
 The GNU General Public License version 3. Please see the [license file](LICENSE) for more information.
 This work [is licensed](LICENSE) under the [GNU GPL v3][link-license].
 
+[ico-travis]: https://img.shields.io/travis/crypto-technology/cryptocurrency/master.svg?style=flat-square
 [ico-license]: https://img.shields.io/github/license/crypto-technology/cryptocurrency.svg?style=flat-square
 [ico-php]: https://img.shields.io/badge/php-7.0-red.svg?style=flat-square
 
+[link-travis]: https://travis-ci.com/crypto-technology/cryptocurrency
 [link-license]: https://www.gnu.org/licenses/gpl-3.0.en.html
 [link-php]: https://secure.php.net/downloads.php
 [link-roave]: https://github.com/Roave/SecurityAdvisories
