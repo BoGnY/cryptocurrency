@@ -47,7 +47,8 @@
         }
     },
     "scripts": {
-        "test": "vendor/bin/phpunit",
+        "test-win": "vendor\\bin\\phpunit --bootstrap vendor\\autoload.php --configuration phpunit.xml tests",
+        "test-unix": "vendor/bin/phpunit --bootstrap vendor/autoload.php --configuration phpunit.xml tests",
         "php-cs-fixer-win": "vendor\\bin\\php-cs-fixer fix .",
         "php-cs-fixer-unix": "vendor/bin/php-cs-fixer fix ."
     },
