@@ -24,28 +24,28 @@ declare(strict_types=1);
 
 namespace CryptoTech\Cryptocurrency;
 
-class Zilliqa extends Cryptocurrency
+class BitcoinDiamond extends Cryptocurrency
 {
     /**
      * {@inheritdoc}
      */
     public static function build()
     {
-        parent::$id = 2469;
-        parent::$name = 'Zilliqa';
-        parent::$symbol = 'ZIL';
-        parent::$type = 'token';
-        parent::$mineable = false;
-        parent::$description = 'Zilliqa is a scalable, secure public blockchain platform. It\'s the first public blockchain platform that implemented sharding and achieved a throughput of 2828 transactions per second in its test net. This enables new use cases that have high-throughput demands that were not previously possible on legacy public blockchain platforms.';
+        parent::$id = 2222;
+        parent::$name = 'Bitcoin Diamond';
+        parent::$symbol = 'BCD';
+        parent::$type = 'coin';
+        parent::$mineable = true;
+        parent::$description = 'Bitcoin Diamond is a hard fork of Bitcoin. The fork occurring at at block height 495866, implemented changes including a new proof of work algorithm to deter attacks on the network and segregation of transaction signatures from transactions on the chain for additional capacity allowing a greater number of transactions per second on the network as a whole.';
         parent::$website = [
-            'https://zilliqa.com',
+            'http://btcd.io/',
         ];
         parent::$explorer = [
-            'https://etherscan.io/token/0x05f4a42e251f2d52b8ed15e9fedaacfcef1fad27',
-            'https://ethplorer.io/address/0x05f4a42e251f2d52b8ed15e9fedaacfcef1fad27',
+            'http://20.184.13.116/v2/addr/%s',
+            'http://explorer.btcd.io/',
         ];
         parent::$source_code = [
-            'https://github.com/Zilliqa/Zilliqa',
+            'https://github.com/eveybcd/BitcoinDiamond',
         ];
     }
 }

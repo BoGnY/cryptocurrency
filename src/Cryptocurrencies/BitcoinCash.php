@@ -24,28 +24,30 @@ declare(strict_types=1);
 
 namespace CryptoTech\Cryptocurrency;
 
-class Zilliqa extends Cryptocurrency
+class BitcoinCash extends Cryptocurrency
 {
     /**
      * {@inheritdoc}
      */
     public static function build()
     {
-        parent::$id = 2469;
-        parent::$name = 'Zilliqa';
-        parent::$symbol = 'ZIL';
-        parent::$type = 'token';
-        parent::$mineable = false;
-        parent::$description = 'Zilliqa is a scalable, secure public blockchain platform. It\'s the first public blockchain platform that implemented sharding and achieved a throughput of 2828 transactions per second in its test net. This enables new use cases that have high-throughput demands that were not previously possible on legacy public blockchain platforms.';
+        parent::$id = 1831;
+        parent::$name = 'Bitcoin Cash';
+        parent::$symbol = 'BCH';
+        parent::$type = 'coin';
+        parent::$mineable = true;
+        parent::$description = 'Bitcoin Cash (ABC) is hard fork (a community-activated update to the protocol or code) of Bitcoin that took effect on 1st August 2017 that increased the block size to 8MB, to help the scale the underlying technology of Bitcoin. In 16th November 2018 Bitcoin Cash was hard forked again and split into Bitcoin SV and Bitcoin ABC. Bitcoin ABC became the dominant chain and took over the BCH ticker as it had more hashpower and majority of the nodes in the network.';
         parent::$website = [
-            'https://zilliqa.com',
+            'https://www.bitcoincash.org',
         ];
         parent::$explorer = [
-            'https://etherscan.io/token/0x05f4a42e251f2d52b8ed15e9fedaacfcef1fad27',
-            'https://ethplorer.io/address/0x05f4a42e251f2d52b8ed15e9fedaacfcef1fad27',
+            'https://www.blocktrail.com/BCC/json/blockchain/address/%s',
+            'https://blockchair.com/bitcoin-cash',
+            'https://bch.tokenview.com/en',
+            'http://blockdozer.com/insight',
         ];
         parent::$source_code = [
-            'https://github.com/Zilliqa/Zilliqa',
+            'https://github.com/bitcoincashorg',
         ];
     }
 }
