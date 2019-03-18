@@ -16,16 +16,16 @@ class Ripple extends Cryptocurrency
         parent::$symbol = 'XRP';
         parent::$type = 'coin';
         parent::$mineable = false;
-        parent::$description = 'Ripple description.';
+        parent::$description = 'Ripple is an independent digital asset that is native to the Ripple Consensus Ledger. With proven governance and the fastest transaction confirmation of its kind, XRP is said to be the most efficient settlement option for financial institutions and liquidity providers seeking global reach, accessibility and fast settlement finality for interbank flows.';
         parent::$website = [
-            'https://ripple.com/xrp/'
+            'https://ripple.com/xrp',
         ];
         parent::$explorer = [
-            'https://xrpcharts.ripple.com/#/graph/',
-            'https://bithomp.com/explorer/'
+            'https://xrpcharts.ripple.com/#/graph',
+            'https://bithomp.com/explorer'
         ];
         parent::$source_code = [
-            'https://github.com/ripple'
+            'https://github.com/ripple',
         ];
     }
 }
