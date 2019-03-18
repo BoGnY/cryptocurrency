@@ -166,5 +166,8 @@ phpunit.xml
 # Exclude backups dir
 backup/
 
+# Exclude build dir
+build/
+
 # Others
 .phpunit.result.cache
