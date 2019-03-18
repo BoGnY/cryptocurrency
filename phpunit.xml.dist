@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Cryptocurrency list package.
+All cryptocurrencies infos in a single package without using a database.
+
+Copyright (C) 2018-2019 <Crypto Technology srl>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/7.5/phpunit.xsd"
+         backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnError="false"
+         stopOnFailure="false"
+         stopOnIncomplete="false"
+         stopOnSkipped="false"
+         stopOnRisky="false"
+         verbose="true">
+    <testsuites>
+        <testsuite name="Cryptocurrency Test Suite">
+            <directory phpVersion="7.1" phpVersionOperator=">=">./tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./src</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="junit" target="build/report.junit.xml" />
+        <log type="coverage-html" target="build/coverage.html" />
+        <log type="coverage-text" target="build/coverage.txt" />
+        <log type="coverage-php" target="build/coverage.php" />
+        <log type="coverage-clover" target="build/logs/clover.xml" />
+    </logging>
+    <php>
+        <!-- define your env variables for the test env here -->
+        <ini name="error_reporting" value="E_ALL" force="true" />
+        <ini name="display_errors" value="1" force="true" />
+        <ini name="display_startup_errors" value="1" force="true" />
+        <ini name="memory_limit" value="-1" force="true" />
+    </php>
+</phpunit>
