@@ -16,7 +16,6 @@ class STASISEURS extends Cryptocurrency
         parent::$symbol = 'EURS';
         parent::$type = 'token';
         parent::$mineable = false;
-        parent::$algorithm = Algorithm::PoW;
         parent::$description = 'STASIS provides a full-service tokenization platform, including token creation/redemption, third-party audits, custodial services, and deep expertise in current regulatory environment. Tokenized assets are always backed 1:1 by collateral held in reserve accounts. The EURS stablecoin combines the benefits of blockchain technology with the reputation and relative stability of the euro.';
         parent::$website = [
             'https://stasis.net',

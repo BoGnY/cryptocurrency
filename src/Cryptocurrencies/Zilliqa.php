@@ -16,7 +16,6 @@ class Zilliqa extends Cryptocurrency
         parent::$symbol = 'ZIL';
         parent::$type = 'token';
         parent::$mineable = false;
-        parent::$algorithm = Algorithm::PoW;
         parent::$description = 'Zilliqa is a scalable, secure public blockchain platform. It\'s the first public blockchain platform that implemented sharding and achieved a throughput of 2828 transactions per second in its test net. This enables new use cases that have high-throughput demands that were not previously possible on legacy public blockchain platforms.';
         parent::$website = [
             'https://zilliqa.com',
