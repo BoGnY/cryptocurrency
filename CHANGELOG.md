@@ -4,6 +4,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog][link-keepachangelog],
 and this project adheres to [Semantic Versioning][link-semver].
 
+## [Unreleased]
+### Added
+- 
+
+### Changed
+- 
+
+### Deprecated
+- 
+
+### Removed
+- 
+
+### Fixed
+- 
+
+### Security
+- 
+
 ## [0.2] - 2019-03-21
 ### Added
 - Added 4 new cryptocurrency: Bitcoin Cash, Bitcoin Diamond, Bitcoin Gold and Bitcoin Satoshi Vision (commit [50d586a](https://github.com/crypto-technology/cryptocurrency/commit/50d586ac877bc60f321597611fc678636c45da11)).
@@ -19,5 +38,6 @@ and this project adheres to [Semantic Versioning][link-semver].
 [link-keepachangelog]: https://keepachangelog.com/en/1.0.0/
 [link-semver]: https://semver.org/spec/v2.0.0.html
 
-[0.2]: https://github.com/crypto-tech/cryptocurrency/compare/v0.1...v0.2
-[0.1]: https://github.com/crypto-tech/cryptocurrency/releases/tag/v0.1
+[Unreleased]: https://github.com/crypto-technology/cryptocurrency/compare/v0.2...HEAD
+[0.2]: https://github.com/crypto-technology/cryptocurrency/compare/v0.1...v0.2
+[0.1]: https://github.com/crypto-technology/cryptocurrency/releases/tag/v0.1
