@@ -34,77 +34,77 @@ class Cryptocurrency implements CryptocurrencyInterface
      *
      * @var int
      */
-    public static $id = 0;
+    protected $id = 0;
 
     /**
      * Cryptocurrency name.
      *
      * @var string
      */
-    public static $name = '';
+    protected $name = '';
 
     /**
      * Cryptocurrency symbol.
      *
      * @var string
      */
-    public static $symbol = '';
+    protected $symbol = '';
 
     /**
      * Cryptocurrency type.
      *
      * @var string
      */
-    public static $type = '';
+    protected $type = '';
 
     /**
      * Cryptocurrency logo.
      *
      * @var string
      */
-    public static $logo = '';
+    protected $logo = '';
 
     /**
      * Cryptocurrency mineable.
      *
      * @var bool
      */
-    public static $mineable = false;
+    protected $mineable = false;
 
     /**
      * Cryptocurrency description.
      *
      * @var string
      */
-    public static $description = '';
+    protected $description = '';
 
     /**
      * Cryptocurrency website url.
      *
      * @var array
      */
-    public static $website = [];
+    protected $website = [];
 
     /**
      * Cryptocurrency explorer urls.
      *
      * @var array
      */
-    public static $explorer = [];
+    protected $explorer = [];
 
     /**
      * Cryptocurrency sourcecode url.
      *
      * @var array
      */
-    public static $source_code = [];
+    protected $source_code = [];
 
     /**
      * {@inheritdoc}
      */
     public function getId(): int
     {
-        return self::$id;
+        return $this->id;
     }
 
     /**
@@ -112,7 +112,7 @@ class Cryptocurrency implements CryptocurrencyInterface
      */
     public function getName(): string
     {
-        return self::$name;
+        return $this->name;
     }
 
     /**
@@ -120,7 +120,7 @@ class Cryptocurrency implements CryptocurrencyInterface
      */
     public function getSymbol(): string
     {
-        return self::$symbol;
+        return $this->symbol;
     }
 
     /**
@@ -128,7 +128,7 @@ class Cryptocurrency implements CryptocurrencyInterface
      */
     public function getType(): string
     {
-        return self::$type;
+        return $this->type;
     }
 
     /**
@@ -136,7 +136,7 @@ class Cryptocurrency implements CryptocurrencyInterface
      */
     public function getLogo($size, $path): string
     {
-        return $path.'crypto-logo'.DIRECTORY_SEPARATOR.(string) $size.'px'.DIRECTORY_SEPARATOR.self::$id.'.png';
+        return $path.'crypto-logo'.DIRECTORY_SEPARATOR.(string) $size.'px'.DIRECTORY_SEPARATOR.$this->id.'.png';
     }
 
     /**
@@ -144,7 +144,7 @@ class Cryptocurrency implements CryptocurrencyInterface
      */
     public function isMineable(): bool
     {
-        return self::$mineable;
+        return $this->mineable;
     }
 
     /**
@@ -152,7 +152,7 @@ class Cryptocurrency implements CryptocurrencyInterface
      */
     public function setDescription($description)
     {
-        self::$description = $description;
+        $this->description = $description;
     }
 
     /**
@@ -160,7 +160,7 @@ class Cryptocurrency implements CryptocurrencyInterface
      */
     public function getDescription(): string
     {
-        return self::$description;
+        return $this->description;
     }
 
     /**
@@ -168,7 +168,7 @@ class Cryptocurrency implements CryptocurrencyInterface
      */
     public function setProjectUrl($website)
     {
-        self::$website = $website;
+        $this->website = $website;
     }
 
     /**
@@ -176,7 +176,7 @@ class Cryptocurrency implements CryptocurrencyInterface
      */
     public function getProjectUrl(): array
     {
-        return self::$website;
+        return $this->website;
     }
 
     /**
@@ -184,7 +184,7 @@ class Cryptocurrency implements CryptocurrencyInterface
      */
     public function setExplorerUrl($explorer)
     {
-        self::$explorer = $explorer;
+        $this->explorer = $explorer;
     }
 
     /**
@@ -192,7 +192,7 @@ class Cryptocurrency implements CryptocurrencyInterface
      */
     public function getExplorerUrl(): array
     {
-        return self::$explorer;
+        return $this->explorer;
     }
 
     /**
@@ -200,7 +200,7 @@ class Cryptocurrency implements CryptocurrencyInterface
      */
     public function setSourceCodeUrl($source_code)
     {
-        self::$source_code = $source_code;
+        $this->source_code = $source_code;
     }
 
     /**
@@ -208,29 +208,31 @@ class Cryptocurrency implements CryptocurrencyInterface
      */
     public function getSourceCodeUrl(): array
     {
-        return self::$source_code;
+        return $this->source_code;
     }
 
     /**
      * {@inheritdoc}
      */
-    public static function build()
+    public function build()
     {
     }
 
     /**
-     * Cryptocurrency constructor.
+     * Cryptocurrency loader.
      *
      * @param string $name
      * Must be the class name of the selected cryptocurrency.
      *
      * @throws \CryptoTech\Cryptocurrency\Exception\CryptoNotFoundException
      * @throws \CryptoTech\Cryptocurrency\Exception\CryptoNotEnabledException
+     *
+     * @return \CryptoTech\Cryptocurrency\Cryptocurrency
      */
-    public function __construct(string $name)
+    public function load(string $name): Cryptocurrency
     {
+        $class_name = '\\CryptoTech\\Cryptocurrency\\'.$name;
         if ( ! in_array($name, CryptocurrencyCollection::$crypto_enabled, false)) {
-            $class_name = '\\CryptoTech\\Cryptocurrency\\'.$name;
             if ( ! class_exists($class_name)) {
                 /* @noinspection PhpUnhandledExceptionInspection */
                 throw new CryptoNotFoundException(sprintf('Cryptocurrency class "%s" not found! This cryptocurrency is not implemented yet.', $class_name));
@@ -240,6 +242,6 @@ class Cryptocurrency implements CryptocurrencyInterface
             throw new CryptoNotEnabledException(sprintf('The cryptocurrency ("%s") you have selected is not enabled in your configuration!', $name));
         }
 
-        return call_user_func('\\CryptoTech\\Cryptocurrency\\'.$name.'::build');
+        return call_user_func([new $class_name($name), 'build']);
     }
 }

@@ -144,5 +144,5 @@ interface CryptocurrencyInterface
      *
      * @return mixed
      */
-    public static function build();
+    public function build();
 }

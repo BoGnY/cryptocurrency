@@ -3,6 +3,7 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Build Status][ico-travis]][link-travis]
+[![Last commit][ico-commit]][link-commit]
 [![License][ico-license]][link-license]
 [![Requires PHP7.1][ico-php]][link-php]
 
@@ -27,7 +28,8 @@ $crypto_enabled = (include 'config/cryptocurrency.php')['crypto_enabled'];
 // Inject the enabled cryptocurrencies' array in the collection
 $crypto_coll->loadEnabledCrypto($crypto_enabled);
 
-$bitcoin = new \CryptoTech\Cryptocurrency\Cryptocurrency('Bitcoin');
+$cryptocurrency = new \CryptoTech\Cryptocurrency\Cryptocurrency();
+$bitcoin = $cryptocurrency->load('Bitcoin');
 
 // Return (int) cryptocurrency id (CoinMarketCap ID)
 var_dump($bitcoin->getId());
@@ -79,7 +81,11 @@ Please see the [CHANGELOG](CHANGELOG.md) for more information on what has change
 ## Testing
 
 ``` bash
-$ vendor/bin/phpunit tests
+# For Windows system
+$ composer test-win
+
+# For Unix system
+$ composer test-unix
 ```
 
 ## Contributing
@@ -88,10 +94,33 @@ Your help is always welcome! Feel free to open issues, ask questions, talk about
 Of course there are some [contributing guidelines](CONTRIBUTING.md) and a [code of conduct](CODE_OF_CONDUCT.md), which I invite you to check out.  
 For all other contributions, see below.
 
+After every code changes, but before submit your pull request, please apply Php Cs Fixer code fixing:
+``` bash
+# For Windows system
+$ composer php-cs-fixer-win
+
+# For Unix system
+$ composer php-cs-fixer-unix
+```
+
 ## Security
 
 The `CryptoTech\Cryptocurrency` package will be checked for security vulnerabilities using [Roave Security Advisories][link-roave] checker.
 If you discover any security related issues, please email [security@cryptotech.srl](mailto:security@cryptotech.srl) instead of using the issue tracker.
+
+## Code
+
+cloc|github.com/AlDanial/cloc v 1.80  T=0.03 s (1995.2 files/s, 115665.7 lines/s)
+--- | ---
+
+Language|files|blank %|comment %|code|scale|3rd|gen.|equiv
+:-------|-------:|-------:|-------:|-------:|-------:|-------:|-------:|-------:
+PHP|63|11.38|48.77|1475|3.5|5162.5
+Markdown|3|24.84|0.00|121|1|121
+JSON|1|0.00|0.00|63|2.5|157.5
+YAML|1|23.53|0.00|13|0.9|11.7
+--------|--------|--------|--------|--------|--------|--------|--------|--------
+SUM:|68|11.80|45.79|1672|x|3.26|=|5452.70
 
 ## Credits
 
@@ -109,13 +138,15 @@ This work [is licensed](LICENSE) under the [GNU GPL v3][link-license].
 
 [ico-version]: https://img.shields.io/packagist/v/crypto-technology/cryptocurrency.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/crypto-technology/cryptocurrency.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/crypto-technology/cryptocurrency/master.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/com/crypto-technology/cryptocurrency/master.svg?style=flat-square
+[ico-commit]: https://img.shields.io/github/last-commit/crypto-technology/cryptocurrency.svg?style=flat-square
 [ico-license]: https://img.shields.io/github/license/crypto-technology/cryptocurrency.svg?style=flat-square
-[ico-php]: https://img.shields.io/badge/php-7.0-red.svg?style=flat-square
+[ico-php]: https://img.shields.io/badge/php-7.1-blue.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/crypto-technology/cryptocurrency
 [link-downloads]: https://packagist.org/packages/crypto-technology/cryptocurrency
 [link-travis]: https://travis-ci.com/crypto-technology/cryptocurrency
+[link-commit]: https://github.com/crypto-technology/cryptocurrency/commits
 [link-license]: https://www.gnu.org/licenses/gpl-3.0.en.html
 [link-php]: https://secure.php.net/downloads.php
 [link-roave]: https://github.com/Roave/SecurityAdvisories

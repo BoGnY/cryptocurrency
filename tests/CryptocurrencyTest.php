@@ -115,7 +115,7 @@ final class CryptocurrencyTest extends TestCase
     public function test_it_will_throw_an_exception_when_try_to_get_a_not_existent_cryptocurrency(string $not_existent_cryptocurrency): void
     {
         $this->expectException(CryptoNotFoundException::class);
-        new Cryptocurrency($not_existent_cryptocurrency);
+        (new Cryptocurrency())->load($not_existent_cryptocurrency);
     }
 
     public function not_existent_cryptocurrency(): array
@@ -136,7 +136,7 @@ final class CryptocurrencyTest extends TestCase
     public function test_it_will_throw_an_exception_when_try_to_get_a_not_enabled_cryptocurrency(string $not_enabled_cryptocurrency): void
     {
         $this->expectException(CryptoNotEnabledException::class);
-        new Cryptocurrency($not_enabled_cryptocurrency);
+        (new Cryptocurrency())->load($not_enabled_cryptocurrency);
     }
 
     public function not_enabled_cryptocurrency(): array

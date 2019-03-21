@@ -37,7 +37,8 @@ var_dump($crypto_enabled);
 echo 'Collation $crypto_coll:'.PHP_EOL;
 var_dump(\CryptoTech\Cryptocurrency\CryptocurrencyCollection::$crypto_enabled);
 
-$bitcoin = new \CryptoTech\Cryptocurrency\Cryptocurrency('Ripple');
+$cryptocurrency = new \CryptoTech\Cryptocurrency\Cryptocurrency();
+$bitcoin = $cryptocurrency->load('Bitcoin');
 
 // Return (int) cryptocurrency id (CoinMarketCap ID)
 var_dump($bitcoin->getId());
