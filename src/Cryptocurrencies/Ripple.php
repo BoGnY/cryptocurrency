@@ -34,17 +34,11 @@ class Ripple extends Cryptocurrency
      */
     public function build()
     {
-        parent::$mineable = false;
-        parent::$description = 'Ripple is an independent digital asset that is native to the Ripple Consensus Ledger. With proven governance and the fastest transaction confirmation of its kind, XRP is said to be the most efficient settlement option for financial institutions and liquidity providers seeking global reach, accessibility and fast settlement finality for interbank flows.';
-        parent::$website = [
         $this->id = 52;
         $this->name = 'Ripple';
         $this->symbol = 'XRP';
         $this->type = 'coin';
         $this->mineable = false;
-        $this->algorithm = [
-            'NONE',
-        ];
         $this->description = 'Ripple is an independent digital asset that is native to the Ripple Consensus Ledger. With proven governance and the fastest transaction confirmation of its kind, XRP is said to be the most efficient settlement option for financial institutions and liquidity providers seeking global reach, accessibility and fast settlement finality for interbank flows.';
         $this->website = [
             'https://ripple.com/xrp',

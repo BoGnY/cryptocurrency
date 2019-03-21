@@ -34,17 +34,11 @@ class Zilliqa extends Cryptocurrency
      */
     public function build()
     {
-        parent::$mineable = false;
-        parent::$description = 'Zilliqa is a scalable, secure public blockchain platform. It\'s the first public blockchain platform that implemented sharding and achieved a throughput of 2828 transactions per second in its test net. This enables new use cases that have high-throughput demands that were not previously possible on legacy public blockchain platforms.';
-        parent::$website = [
+        $this->id = 2469;
         $this->name = 'Zilliqa';
         $this->symbol = 'ZIL';
         $this->type = 'token';
         $this->mineable = false;
-        $this->algorithm = [
-            'PoW',
-            'PBFT',
-        ];
         $this->description = 'Zilliqa is a scalable, secure public blockchain platform. It\'s the first public blockchain platform that implemented sharding and achieved a throughput of 2828 transactions per second in its test net. This enables new use cases that have high-throughput demands that were not previously possible on legacy public blockchain platforms.';
         $this->website = [
             'https://zilliqa.com',

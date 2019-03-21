@@ -34,17 +34,11 @@ class STASISEURS extends Cryptocurrency
      */
     public function build()
     {
-        parent::$mineable = false;
-        parent::$description = 'STASIS provides a full-service tokenization platform, including token creation/redemption, third-party audits, custodial services, and deep expertise in current regulatory environment. Tokenized assets are always backed 1:1 by collateral held in reserve accounts. The EURS stablecoin combines the benefits of blockchain technology with the reputation and relative stability of the euro.';
-        parent::$website = [
         $this->id = 2989;
         $this->name = 'STASIS EURS';
         $this->symbol = 'EURS';
         $this->type = 'token';
         $this->mineable = false;
-        $this->algorithm = [
-            'NONE',
-        ];
         $this->description = 'STASIS provides a full-service tokenization platform, including token creation/redemption, third-party audits, custodial services, and deep expertise in current regulatory environment. Tokenized assets are always backed 1:1 by collateral held in reserve accounts. The EURS stablecoin combines the benefits of blockchain technology with the reputation and relative stability of the euro.';
         $this->website = [
             'https://stasis.net',
