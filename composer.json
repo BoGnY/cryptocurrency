@@ -49,8 +49,8 @@
     "scripts": {
         "test-win": "vendor\\bin\\phpunit --bootstrap vendor\\autoload.php --configuration phpunit.xml tests",
         "test-unix": "vendor/bin/phpunit --bootstrap vendor/autoload.php --configuration phpunit.xml tests",
-        "php-cs-fixer-win": "vendor\\bin\\php-cs-fixer fix .",
-        "php-cs-fixer-unix": "vendor/bin/php-cs-fixer fix ."
+        "php-cs-fixer-win": "vendor\\bin\\php-cs-fixer fix --verbose --config=.\\.php_cs --path-mode=intersection .",
+        "php-cs-fixer-unix": "vendor/bin/php-cs-fixer fix --verbose --config=./.php_cs --path-mode=intersection ."
     },
     "config": {
         "optimize-autoloader": true,

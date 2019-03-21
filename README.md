@@ -80,7 +80,11 @@ Please see the [CHANGELOG](CHANGELOG.md) for more information on what has change
 ## Testing
 
 ``` bash
-$ vendor/bin/phpunit tests
+# For Windows system
+$ composer test-win
+
+# For Unix system
+$ composer test-unix
 ```
 
 ## Contributing
@@ -89,10 +93,33 @@ Your help is always welcome! Feel free to open issues, ask questions, talk about
 Of course there are some [contributing guidelines](CONTRIBUTING.md) and a [code of conduct](CODE_OF_CONDUCT.md), which I invite you to check out.  
 For all other contributions, see below.
 
+After every code changes, but before submit your pull request, please apply Php Cs Fixer code fixing:
+``` bash
+# For Windows system
+$ composer php-cs-fixer-win
+
+# For Unix system
+$ composer php-cs-fixer-unix
+```
+
 ## Security
 
 The `CryptoTech\Cryptocurrency` package will be checked for security vulnerabilities using [Roave Security Advisories][link-roave] checker.
 If you discover any security related issues, please email [security@cryptotech.srl](mailto:security@cryptotech.srl) instead of using the issue tracker.
+
+## Code
+
+cloc|github.com/AlDanial/cloc v 1.80  T=0.03 s (1995.2 files/s, 115665.7 lines/s)
+--- | ---
+
+Language|files|blank %|comment %|code|scale|3rd|gen.|equiv
+:-------|-------:|-------:|-------:|-------:|-------:|-------:|-------:|-------:
+PHP|63|11.38|48.77|1475|3.5|5162.5
+Markdown|3|24.84|0.00|121|1|121
+JSON|1|0.00|0.00|63|2.5|157.5
+YAML|1|23.53|0.00|13|0.9|11.7
+--------|--------|--------|--------|--------|--------|--------|--------|--------
+SUM:|68|11.80|45.79|1672|x|3.26|=|5452.70
 
 ## Credits
 
