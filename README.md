@@ -138,7 +138,7 @@ This work [is licensed](LICENSE) under the [GNU GPL v3][link-license].
 
 [ico-version]: https://img.shields.io/packagist/v/crypto-technology/cryptocurrency.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/crypto-technology/cryptocurrency.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/crypto-technology/cryptocurrency/master.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/com/crypto-technology/cryptocurrency/master.svg?style=flat-square
 [ico-commit]: https://img.shields.io/github/last-commit/crypto-technology/cryptocurrency.svg?style=flat-square
 [ico-license]: https://img.shields.io/github/license/crypto-technology/cryptocurrency.svg?style=flat-square
 [ico-php]: https://img.shields.io/badge/php-7.1-blue.svg?style=flat-square
