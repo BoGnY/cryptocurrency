@@ -24,28 +24,33 @@ declare(strict_types=1);
 
 namespace CryptoTech\Cryptocurrency;
 
+/**
+ * Class BitcoinDiamond.
+ */
 class BitcoinDiamond extends Cryptocurrency
 {
     /**
      * {@inheritdoc}
      */
-    public static function build()
+    public function build()
     {
-        parent::$id = 2222;
-        parent::$name = 'Bitcoin Diamond';
-        parent::$symbol = 'BCD';
-        parent::$type = 'coin';
-        parent::$mineable = true;
-        parent::$description = 'Bitcoin Diamond is a hard fork of Bitcoin. The fork occurring at at block height 495866, implemented changes including a new proof of work algorithm to deter attacks on the network and segregation of transaction signatures from transactions on the chain for additional capacity allowing a greater number of transactions per second on the network as a whole.';
-        parent::$website = [
+        $this->id = 2222;
+        $this->name = 'Bitcoin Diamond';
+        $this->symbol = 'BCD';
+        $this->type = 'coin';
+        $this->mineable = true;
+        $this->description = 'Bitcoin Diamond is a hard fork of Bitcoin. The fork occurring at at block height 495866, implemented changes including a new proof of work algorithm to deter attacks on the network and segregation of transaction signatures from transactions on the chain for additional capacity allowing a greater number of transactions per second on the network as a whole.';
+        $this->website = [
             'http://btcd.io/',
         ];
-        parent::$explorer = [
+        $this->explorer = [
             'http://20.184.13.116/v2/addr/%s',
             'http://explorer.btcd.io/',
         ];
-        parent::$source_code = [
+        $this->source_code = [
             'https://github.com/eveybcd/BitcoinDiamond',
         ];
+
+        return $this;
     }
 }

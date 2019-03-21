@@ -24,28 +24,33 @@ declare(strict_types=1);
 
 namespace CryptoTech\Cryptocurrency;
 
+/**
+ * Class IOTA.
+ */
 class IOTA extends Cryptocurrency
 {
     /**
      * {@inheritdoc}
      */
-    public static function build()
+    public function build()
     {
-        parent::$id = 1720;
-        parent::$name = 'IOTA';
-        parent::$symbol = 'MIOTA';
-        parent::$type = 'coin';
-        parent::$mineable = false;
-        parent::$description = 'IOTA is a distributed ledger for the Internet of Things that uses a directed acyclic graph (DAG) instead of a conventional blockchain. Its quantum-proof protocol, Tangle, reportedly brings benefits like zero fees, infinite scalability, fast transactions, and secure data transfer. The IOTA Tangle is a Directed Acyclic Graph which has no fees on transactions and no fixed limit on how many transactions can be confirmed per second in the network; instead, the throughput grows in conjunction with activity in the network; i.e., the more activity, the faster the network.';
-        parent::$website = [
+        $this->id = 1720;
+        $this->name = 'IOTA';
+        $this->symbol = 'MIOTA';
+        $this->type = 'coin';
+        $this->mineable = false;
+        $this->description = 'IOTA is a distributed ledger for the Internet of Things that uses a directed acyclic graph (DAG) instead of a conventional blockchain. Its quantum-proof protocol, Tangle, reportedly brings benefits like zero fees, infinite scalability, fast transactions, and secure data transfer. The IOTA Tangle is a Directed Acyclic Graph which has no fees on transactions and no fixed limit on how many transactions can be confirmed per second in the network; instead, the throughput grows in conjunction with activity in the network; i.e., the more activity, the faster the network.';
+        $this->website = [
             'https://www.iota.org',
         ];
-        parent::$explorer = [
+        $this->explorer = [
             'https://thetangle.org',
             'https://iotasear.ch',
         ];
-        parent::$source_code = [
+        $this->source_code = [
             'https://github.com/iotaledger',
         ];
+
+        return $this;
     }
 }

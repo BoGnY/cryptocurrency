@@ -24,29 +24,34 @@ declare(strict_types=1);
 
 namespace CryptoTech\Cryptocurrency;
 
+/**
+ * Class Dogecoin.
+ */
 class Dogecoin extends Cryptocurrency
 {
     /**
      * {@inheritdoc}
      */
-    public static function build()
+    public function build()
     {
-        parent::$id = 74;
-        parent::$name = 'Dogecoin';
-        parent::$symbol = 'DOGE';
-        parent::$type = 'coin';
-        parent::$mineable = true;
-        parent::$description = 'Based on the the popular "Doge" Internet meme and featuring a Shiba Inu on its logo, Dogecoin (DOGE) is a cryptocurrency that was forked from Litecoin in December 2013. Dogecoin has been used primarily as a tipping system on Reddit and Twitter to reward the creation or sharing of quality content. Dogecoin was created by Billy Markus from Portland, Oregon and Jackson Palmer from Sydney, Australia. Both had envisaged Dogecoin as a fun, light-hearted cryptocurrency that would have greater appeal beyond the core Bitcoin audience.';
-        parent::$website = [
+        $this->id = 74;
+        $this->name = 'Dogecoin';
+        $this->symbol = 'DOGE';
+        $this->type = 'coin';
+        $this->mineable = true;
+        $this->description = 'Based on the the popular "Doge" Internet meme and featuring a Shiba Inu on its logo, Dogecoin (DOGE) is a cryptocurrency that was forked from Litecoin in December 2013. Dogecoin has been used primarily as a tipping system on Reddit and Twitter to reward the creation or sharing of quality content. Dogecoin was created by Billy Markus from Portland, Oregon and Jackson Palmer from Sydney, Australia. Both had envisaged Dogecoin as a fun, light-hearted cryptocurrency that would have greater appeal beyond the core Bitcoin audience.';
+        $this->website = [
             'http://dogecoin.com',
         ];
-        parent::$explorer = [
+        $this->explorer = [
             'https://chain.so/api/v2/get_address_balance/DOGE/%s',
             'https://blockchair.com/dogecoin',
             'http://dogechain.info/chain/Dogecoin',
         ];
-        parent::$source_code = [
+        $this->source_code = [
             'https://github.com/dogecoin/dogecoin',
         ];
+
+        return $this;
     }
 }

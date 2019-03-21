@@ -24,30 +24,35 @@ declare(strict_types=1);
 
 namespace CryptoTech\Cryptocurrency;
 
+/**
+ * Class BitcoinCash.
+ */
 class BitcoinCash extends Cryptocurrency
 {
     /**
      * {@inheritdoc}
      */
-    public static function build()
+    public function build()
     {
-        parent::$id = 1831;
-        parent::$name = 'Bitcoin Cash';
-        parent::$symbol = 'BCH';
-        parent::$type = 'coin';
-        parent::$mineable = true;
-        parent::$description = 'Bitcoin Cash (ABC) is hard fork (a community-activated update to the protocol or code) of Bitcoin that took effect on 1st August 2017 that increased the block size to 8MB, to help the scale the underlying technology of Bitcoin. In 16th November 2018 Bitcoin Cash was hard forked again and split into Bitcoin SV and Bitcoin ABC. Bitcoin ABC became the dominant chain and took over the BCH ticker as it had more hashpower and majority of the nodes in the network.';
-        parent::$website = [
+        $this->id = 1831;
+        $this->name = 'Bitcoin Cash';
+        $this->symbol = 'BCH';
+        $this->type = 'coin';
+        $this->mineable = true;
+        $this->description = 'Bitcoin Cash (ABC) is hard fork (a community-activated update to the protocol or code) of Bitcoin that took effect on 1st August 2017 that increased the block size to 8MB, to help the scale the underlying technology of Bitcoin. In 16th November 2018 Bitcoin Cash was hard forked again and split into Bitcoin SV and Bitcoin ABC. Bitcoin ABC became the dominant chain and took over the BCH ticker as it had more hashpower and majority of the nodes in the network.';
+        $this->website = [
             'https://www.bitcoincash.org',
         ];
-        parent::$explorer = [
+        $this->explorer = [
             'https://www.blocktrail.com/BCC/json/blockchain/address/%s',
             'https://blockchair.com/bitcoin-cash',
             'https://bch.tokenview.com/en',
             'http://blockdozer.com/insight',
         ];
-        parent::$source_code = [
+        $this->source_code = [
             'https://github.com/bitcoincashorg',
         ];
+
+        return $this;
     }
 }

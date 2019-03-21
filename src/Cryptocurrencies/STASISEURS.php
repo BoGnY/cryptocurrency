@@ -24,28 +24,39 @@ declare(strict_types=1);
 
 namespace CryptoTech\Cryptocurrency;
 
+/**
+ * Class STASISEURS.
+ */
 class STASISEURS extends Cryptocurrency
 {
     /**
      * {@inheritdoc}
      */
-    public static function build()
+    public function build()
     {
-        parent::$id = 2989;
-        parent::$name = 'STASIS EURS';
-        parent::$symbol = 'EURS';
-        parent::$type = 'token';
         parent::$mineable = false;
         parent::$description = 'STASIS provides a full-service tokenization platform, including token creation/redemption, third-party audits, custodial services, and deep expertise in current regulatory environment. Tokenized assets are always backed 1:1 by collateral held in reserve accounts. The EURS stablecoin combines the benefits of blockchain technology with the reputation and relative stability of the euro.';
         parent::$website = [
+        $this->id = 2989;
+        $this->name = 'STASIS EURS';
+        $this->symbol = 'EURS';
+        $this->type = 'token';
+        $this->mineable = false;
+        $this->algorithm = [
+            'NONE',
+        ];
+        $this->description = 'STASIS provides a full-service tokenization platform, including token creation/redemption, third-party audits, custodial services, and deep expertise in current regulatory environment. Tokenized assets are always backed 1:1 by collateral held in reserve accounts. The EURS stablecoin combines the benefits of blockchain technology with the reputation and relative stability of the euro.';
+        $this->website = [
             'https://stasis.net',
         ];
-        parent::$explorer = [
+        $this->explorer = [
             'https://etherscan.io/token/0xdb25f211ab05b1c97d595516f45794528a807ad8',
             'https://ethplorer.io/address/0xdb25f211ab05b1c97d595516f45794528a807ad8',
         ];
-        parent::$source_code = [
+        $this->source_code = [
             'https://github.com/STASISNET',
         ];
+
+        return $this;
     }
 }

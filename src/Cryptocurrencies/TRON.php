@@ -24,28 +24,39 @@ declare(strict_types=1);
 
 namespace CryptoTech\Cryptocurrency;
 
+/**
+ * Class TRON.
+ */
 class TRON extends Cryptocurrency
 {
     /**
      * {@inheritdoc}
      */
-    public static function build()
+    public function build()
     {
-        parent::$id = 1958;
-        parent::$name = 'TRON';
-        parent::$symbol = 'TRX';
-        parent::$type = 'coin';
         parent::$mineable = true;
         parent::$description = 'TRON strives to build the future of a truly decentralized internet and global free content entertainment system that utilizes blockchain technology. The TRON Protocol represents the architecture of an operating system based on the blockchain which could enable developers to create smart contracts and decentralized applications, freely publish, own, and store data and other content. According to the TRON Foundation, the ecosystem surrounding this network specializes in offering massive scalability and consistent reliability capable of processing transactions at a high rate via high-throughput computing.';
         parent::$website = [
+        $this->id = 1958;
+        $this->name = 'TRON';
+        $this->symbol = 'TRX';
+        $this->type = 'coin';
+        $this->mineable = true;
+        $this->algorithm = [
+            'DPoS',
+        ];
+        $this->description = 'TRON strives to build the future of a truly decentralized internet and global free content entertainment system that utilizes blockchain technology. The TRON Protocol represents the architecture of an operating system based on the blockchain which could enable developers to create smart contracts and decentralized applications, freely publish, own, and store data and other content. According to the TRON Foundation, the ecosystem surrounding this network specializes in offering massive scalability and consistent reliability capable of processing transactions at a high rate via high-throughput computing.';
+        $this->website = [
             'https://tron.network',
         ];
-        parent::$explorer = [
+        $this->explorer = [
             'https://apilist.tronscan.org/api/account?address=%s',
             'https://www.trxplorer.io',
         ];
-        parent::$source_code = [
+        $this->source_code = [
             'https://github.com/tronprotocol',
         ];
+
+        return $this;
     }
 }

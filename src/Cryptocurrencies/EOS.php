@@ -24,29 +24,34 @@ declare(strict_types=1);
 
 namespace CryptoTech\Cryptocurrency;
 
+/**
+ * Class EOS.
+ */
 class EOS extends Cryptocurrency
 {
     /**
      * {@inheritdoc}
      */
-    public static function build()
+    public function build()
     {
-        parent::$id = 1765;
-        parent::$name = 'EOS';
-        parent::$symbol = 'EOS';
-        parent::$type = 'coin';
-        parent::$mineable = false;
-        parent::$description = 'EOS.IO is a blockchain protocol powered by the native cryptocurrency EOS. The protocol emulates most of the attributes of a real computer including hardware (CPU(s) & GPU(s) for processing, local/RAM memory, hard-disk storage) with the computing resources distributed equally among EOS cryptocurrency holders. EOSIO operates as a smart contract platform and decentralized operating system intended for the deployment of industrial-scale decentralized applications through a decentralized autonomous corporation model. The smart contract platform claims to eliminate transaction fees and also conduct millions of transactions per second. EOS (EOS) is software that introduces a blockchain architecture designed to enable vertical and horizontal scaling of decentralized applications. The EOS software provides accounts, authentication, databases, asynchronous communication and the scheduling of applications across multiple CPU cores and/or clusters.';
-        parent::$website = [
+        $this->id = 1765;
+        $this->name = 'EOS';
+        $this->symbol = 'EOS';
+        $this->type = 'coin';
+        $this->mineable = false;
+        $this->description = 'EOS.IO is a blockchain protocol powered by the native cryptocurrency EOS. The protocol emulates most of the attributes of a real computer including hardware (CPU(s) & GPU(s) for processing, local/RAM memory, hard-disk storage) with the computing resources distributed equally among EOS cryptocurrency holders. EOSIO operates as a smart contract platform and decentralized operating system intended for the deployment of industrial-scale decentralized applications through a decentralized autonomous corporation model. The smart contract platform claims to eliminate transaction fees and also conduct millions of transactions per second. EOS (EOS) is software that introduces a blockchain architecture designed to enable vertical and horizontal scaling of decentralized applications. The EOS software provides accounts, authentication, databases, asynchronous communication and the scheduling of applications across multiple CPU cores and/or clusters.';
+        $this->website = [
             'https://eos.io',
         ];
-        parent::$explorer = [
+        $this->explorer = [
             'https://bloks.io',
             'https://eosflare.io',
             'https://api.eospark.com/api?module=account&action=get_account_balance&apikey=a9564ebc3289b7a14551baf8ad5ec60a&account=%s',
         ];
-        parent::$source_code = [
+        $this->source_code = [
             'https://github.com/eosio',
         ];
+
+        return $this;
     }
 }

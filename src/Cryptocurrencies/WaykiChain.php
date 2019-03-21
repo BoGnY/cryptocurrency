@@ -24,27 +24,38 @@ declare(strict_types=1);
 
 namespace CryptoTech\Cryptocurrency;
 
+/**
+ * Class WaykiChain.
+ */
 class WaykiChain extends Cryptocurrency
 {
     /**
      * {@inheritdoc}
      */
-    public static function build()
+    public function build()
     {
-        parent::$id = 2346;
-        parent::$name = 'WaykiChain';
-        parent::$symbol = 'WICC';
-        parent::$type = 'coin';
         parent::$mineable = false;
         parent::$description = 'WaykiChain, a technology innovation company focusing on underlying blockchain technology research and development and related operations, owns leading public chain for commercial applications in the industry. WaykiChain is a Turing complete smart contract platform adopting DPoS consensus mechanism.';
         parent::$website = [
+        $this->id = 2346;
+        $this->name = 'WaykiChain';
+        $this->symbol = 'WICC';
+        $this->type = 'coin';
+        $this->mineable = false;
+        $this->algorithm = [
+            'DPoS',
+        ];
+        $this->description = 'WaykiChain, a technology innovation company focusing on underlying blockchain technology research and development and related operations, owns leading public chain for commercial applications in the industry. WaykiChain is a Turing complete smart contract platform adopting DPoS consensus mechanism.';
+        $this->website = [
             'https://waykichain.com',
         ];
-        parent::$explorer = [
+        $this->explorer = [
             'https://www.waykiscan.com',
         ];
-        parent::$source_code = [
+        $this->source_code = [
             '',
         ];
+
+        return $this;
     }
 }

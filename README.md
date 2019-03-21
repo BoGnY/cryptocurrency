@@ -27,7 +27,8 @@ $crypto_enabled = (include 'config/cryptocurrency.php')['crypto_enabled'];
 // Inject the enabled cryptocurrencies' array in the collection
 $crypto_coll->loadEnabledCrypto($crypto_enabled);
 
-$bitcoin = new \CryptoTech\Cryptocurrency\Cryptocurrency('Bitcoin');
+$cryptocurrency = new \CryptoTech\Cryptocurrency\Cryptocurrency();
+$bitcoin = $cryptocurrency->load('Bitcoin');
 
 // Return (int) cryptocurrency id (CoinMarketCap ID)
 var_dump($bitcoin->getId());

@@ -24,28 +24,33 @@ declare(strict_types=1);
 
 namespace CryptoTech\Cryptocurrency;
 
+/**
+ * Class Monero.
+ */
 class Monero extends Cryptocurrency
 {
     /**
      * {@inheritdoc}
      */
-    public static function build()
+    public function build()
     {
-        parent::$id = 328;
-        parent::$name = 'Monero';
-        parent::$symbol = 'XMR';
-        parent::$type = 'coin';
-        parent::$mineable = true;
-        parent::$description = 'Monero is a private, secure, and untraceable cryptocurrency that was launched 18th April 2014. With Monero, it is said you are in complete control of your funds and privacy no one else can see anyone else\'s balances or transactions.';
-        parent::$website = [
+        $this->id = 328;
+        $this->name = 'Monero';
+        $this->symbol = 'XMR';
+        $this->type = 'coin';
+        $this->mineable = true;
+        $this->description = 'Monero is a private, secure, and untraceable cryptocurrency that was launched 18th April 2014. With Monero, it is said you are in complete control of your funds and privacy no one else can see anyone else\'s balances or transactions.';
+        $this->website = [
             'https://ww.getmonero.org',
         ];
-        parent::$explorer = [
+        $this->explorer = [
             'http://moneroblocks.info',
             'http://chainradar.com/xmr/blocks',
         ];
-        parent::$source_code = [
+        $this->source_code = [
             'https://github.com/monero-project/monero',
         ];
+
+        return $this;
     }
 }

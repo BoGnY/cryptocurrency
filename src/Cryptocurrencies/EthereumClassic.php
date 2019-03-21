@@ -24,29 +24,34 @@ declare(strict_types=1);
 
 namespace CryptoTech\Cryptocurrency;
 
+/**
+ * Class EthereumClassic.
+ */
 class EthereumClassic extends Cryptocurrency
 {
     /**
      * {@inheritdoc}
      */
-    public static function build()
+    public function build()
     {
-        parent::$id = 1321;
-        parent::$name = 'Ethereum Classic';
-        parent::$symbol = 'ETC';
-        parent::$type = 'coin';
-        parent::$mineable = true;
-        parent::$description = 'After a loophole was exploited by a hacker on 17th June 2016, resulting in millions of stolen Ether, Ethereum forked to a new chain that aimed to remedy the damages from the hack. Ethereum Classic is the continuation of the original Ethereum blockchain - the classic version.';
-        parent::$website = [
+        $this->id = 1321;
+        $this->name = 'Ethereum Classic';
+        $this->symbol = 'ETC';
+        $this->type = 'coin';
+        $this->mineable = true;
+        $this->description = 'After a loophole was exploited by a hacker on 17th June 2016, resulting in millions of stolen Ether, Ethereum forked to a new chain that aimed to remedy the damages from the hack. Ethereum Classic is the continuation of the original Ethereum blockchain - the classic version.';
+        $this->website = [
             'https://ethereumclassic.org',
         ];
-        parent::$explorer = [
+        $this->explorer = [
             'https://api.gastracker.io/addr/%s',
             'http://etherhub.io/',
             'https://blockscout.com/etc/mainnet',
         ];
-        parent::$source_code = [
+        $this->source_code = [
             'https://github.com/ethereumclassic',
         ];
+
+        return $this;
     }
 }

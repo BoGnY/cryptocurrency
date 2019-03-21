@@ -24,27 +24,32 @@ declare(strict_types=1);
 
 namespace CryptoTech\Cryptocurrency;
 
+/**
+ * Class Ravencoin.
+ */
 class Ravencoin extends Cryptocurrency
 {
     /**
      * {@inheritdoc}
      */
-    public static function build()
+    public function build()
     {
-        parent::$id = 2577;
-        parent::$name = 'Ravencoin';
-        parent::$symbol = 'RVN';
-        parent::$type = 'coin';
-        parent::$mineable = true;
-        parent::$description = 'Ravencoin is an open-source blockchain project that specializes in the creation and peer-to-peer transfer of assets. Ravencoin enables users to create and trade any real-world (e.g. commodities) or digital (e.g. virtual goods) assets on a network. The core developers launched Ravencoin on 3rd January 2018. The project has some prominent backers: Bruce Fenton, Board Member of The Bitcoin Foundation, advises the team while Overstock has made a multi-million dollar investment into the project.';
-        parent::$website = [
+        $this->id = 2577;
+        $this->name = 'Ravencoin';
+        $this->symbol = 'RVN';
+        $this->type = 'coin';
+        $this->mineable = true;
+        $this->description = 'Ravencoin is an open-source blockchain project that specializes in the creation and peer-to-peer transfer of assets. Ravencoin enables users to create and trade any real-world (e.g. commodities) or digital (e.g. virtual goods) assets on a network. The core developers launched Ravencoin on 3rd January 2018. The project has some prominent backers: Bruce Fenton, Board Member of The Bitcoin Foundation, advises the team while Overstock has made a multi-million dollar investment into the project.';
+        $this->website = [
             'https://ravencoin.org',
         ];
-        parent::$explorer = [
+        $this->explorer = [
             'https://ravencoin.network/api/addr/%s/?noTxList=1',
         ];
-        parent::$source_code = [
+        $this->source_code = [
             'https://github.com/RavenProject/Ravencoin',
         ];
+
+        return $this;
     }
 }

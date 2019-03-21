@@ -24,29 +24,34 @@ declare(strict_types=1);
 
 namespace CryptoTech\Cryptocurrency;
 
+/**
+ * Class Decred.
+ */
 class Decred extends Cryptocurrency
 {
     /**
      * {@inheritdoc}
      */
-    public static function build()
+    public function build()
     {
-        parent::$id = 1168;
-        parent::$name = 'Decred';
-        parent::$symbol = 'DCR';
-        parent::$type = 'coin';
-        parent::$mineable = true;
-        parent::$description = 'Decred is an open-source, Bitcoin fork that places emphasis on development funding, on-chain governance, and consensus mechanisms.Launched in February 2016 by the Bitcoin developers behind btcsuite (an alternative full-node Bitcoin implementation written in Go (golang)), Decred successfully orchestrated an on-chain user-activated consensus vote, which is emblematic of the project\'s emphasis on community - driven stakeholder governance. Other features of the project include a hybrid proof of work (PoW) - proof of stake(PoS) consensus voting system, a public proposal platform, smart contracts, cross-chain atomic swaps, and cross-platform wallets.';
-        parent::$website = [
+        $this->id = 1168;
+        $this->name = 'Decred';
+        $this->symbol = 'DCR';
+        $this->type = 'coin';
+        $this->mineable = true;
+        $this->description = 'Decred is an open-source, Bitcoin fork that places emphasis on development funding, on-chain governance, and consensus mechanisms.Launched in February 2016 by the Bitcoin developers behind btcsuite (an alternative full-node Bitcoin implementation written in Go (golang)), Decred successfully orchestrated an on-chain user-activated consensus vote, which is emblematic of the project\'s emphasis on community - driven stakeholder governance. Other features of the project include a hybrid proof of work (PoW) - proof of stake(PoS) consensus voting system, a public proposal platform, smart contracts, cross-chain atomic swaps, and cross-platform wallets.';
+        $this->website = [
             'https://www.decred.org',
         ];
-        parent::$explorer = [
+        $this->explorer = [
             'https://mainnet.decred.org/api/addr/%s/?noTxList=1',
             'https://explorer.dcrdata.org',
             'https://stats.decred.org',
         ];
-        parent::$source_code = [
+        $this->source_code = [
             'https://github.com/decred',
         ];
+
+        return $this;
     }
 }

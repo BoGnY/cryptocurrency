@@ -24,30 +24,35 @@ declare(strict_types=1);
 
 namespace CryptoTech\Cryptocurrency;
 
+/**
+ * Class Dash.
+ */
 class Dash extends Cryptocurrency
 {
     /**
      * {@inheritdoc}
      */
-    public static function build()
+    public function build()
     {
-        parent::$id = 131;
-        parent::$name = 'Dash';
-        parent::$symbol = 'DASH';
-        parent::$type = 'coin';
-        parent::$mineable = true;
-        parent::$description = 'Dash, formerly known as Darkcoin until 26th March 2015, is a privacy-centric digital currency with instant transactions. Similar to cash, Dash allows you to remain anonymous while transacting. Dash protects privacy by anonymizing transactions that are made over the network using a technology developed by the Dash team called DarkSend. DarkSend is inspired by the CoinJoin project that was birthed to anonymize Bitcoin transactions. Using Dash, payments are private and cannot be tracked along with balances. Dash harnesses the power of its Masternode network to power an innovative technology called InstantX. When sending funds, users can use InstantX and transactions will be fully sent and irreversible within four seconds. Dash was released on the 18th January 2014 with zero premine coins. It uses 11 rounds of hashing algorithm namely blake, bmw, groestl, jh, keccak, skein, luffa, cubehash, shavite, simd, and echo. As of the current design, there will only be 22 million Dash ever created, making it a deflationary currency.';
-        parent::$website = [
+        $this->id = 131;
+        $this->name = 'Dash';
+        $this->symbol = 'DASH';
+        $this->type = 'coin';
+        $this->mineable = true;
+        $this->description = 'Dash, formerly known as Darkcoin until 26th March 2015, is a privacy-centric digital currency with instant transactions. Similar to cash, Dash allows you to remain anonymous while transacting. Dash protects privacy by anonymizing transactions that are made over the network using a technology developed by the Dash team called DarkSend. DarkSend is inspired by the CoinJoin project that was birthed to anonymize Bitcoin transactions. Using Dash, payments are private and cannot be tracked along with balances. Dash harnesses the power of its Masternode network to power an innovative technology called InstantX. When sending funds, users can use InstantX and transactions will be fully sent and irreversible within four seconds. Dash was released on the 18th January 2014 with zero premine coins. It uses 11 rounds of hashing algorithm namely blake, bmw, groestl, jh, keccak, skein, luffa, cubehash, shavite, simd, and echo. As of the current design, there will only be 22 million Dash ever created, making it a deflationary currency.';
+        $this->website = [
             'https://www.dash.org',
         ];
-        parent::$explorer = [
+        $this->explorer = [
             'https://chain.so/api/v2/get_address_balance/DASH/%s',
             'https://explorer.dash.org',
             'https://insight.dash.org/insight',
             'https://chainz.cryptoid.info/dash',
         ];
-        parent::$source_code = [
+        $this->source_code = [
             'https://github.com/dashpay/dash',
         ];
+
+        return $this;
     }
 }

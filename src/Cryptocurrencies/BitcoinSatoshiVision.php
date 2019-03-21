@@ -24,29 +24,34 @@ declare(strict_types=1);
 
 namespace CryptoTech\Cryptocurrency;
 
+/**
+ * Class BitcoinSatoshiVision.
+ */
 class BitcoinSatoshiVision extends Cryptocurrency
 {
     /**
      * {@inheritdoc}
      */
-    public static function build()
+    public function build()
     {
-        parent::$id = 3602;
-        parent::$name = 'Bitcoin Satoshi Vision';
-        parent::$symbol = 'BSV';
-        parent::$type = 'coin';
-        parent::$mineable = true;
-        parent::$description = 'In 16th November 2018 Bitcoin Cash was hard forked again and split into Bitcoin Satoshi Vision (BSV) and Bitcoin Cash (ABC).';
-        parent::$website = [
+        $this->id = 3602;
+        $this->name = 'Bitcoin Satoshi Vision';
+        $this->symbol = 'BSV';
+        $this->type = 'coin';
+        $this->mineable = true;
+        $this->description = 'In 16th November 2018 Bitcoin Cash was hard forked again and split into Bitcoin Satoshi Vision (BSV) and Bitcoin Cash (ABC).';
+        $this->website = [
             'https://bitcoinsv.io',
         ];
-        parent::$explorer = [
+        $this->explorer = [
             'https://blockchair.com/bitcoin-sv/dashboards/address/%s',
             'https://svblox.com',
             'https://bchsv.tokenview.com/en',
         ];
-        parent::$source_code = [
+        $this->source_code = [
             'https://github.com/bitcoin-sv/bitcoin-sv',
         ];
+
+        return $this;
     }
 }

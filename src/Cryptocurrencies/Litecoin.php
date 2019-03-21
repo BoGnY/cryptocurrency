@@ -24,30 +24,35 @@ declare(strict_types=1);
 
 namespace CryptoTech\Cryptocurrency;
 
+/**
+ * Class Litecoin.
+ */
 class Litecoin extends Cryptocurrency
 {
     /**
      * {@inheritdoc}
      */
-    public static function build()
+    public function build()
     {
-        parent::$id = 2;
-        parent::$name = 'Litecoin';
-        parent::$symbol = 'LTC';
-        parent::$type = 'coin';
-        parent::$mineable = true;
-        parent::$description = 'Litecoin is a peer-to-peer cryptocurrency created by Charlie Lee. It was created based on the Bitcoin protocol but differs in terms of the hashing algorithm used. Litecoin uses the memory intensive Scrypt proof of work mining algorithm. Scrypt allows consumer-grade hardware such as GPU to mine those coins.';
-        parent::$website = [
+        $this->id = 2;
+        $this->name = 'Litecoin';
+        $this->symbol = 'LTC';
+        $this->type = 'coin';
+        $this->mineable = true;
+        $this->description = 'Litecoin is a peer-to-peer cryptocurrency created by Charlie Lee. It was created based on the Bitcoin protocol but differs in terms of the hashing algorithm used. Litecoin uses the memory intensive Scrypt proof of work mining algorithm. Scrypt allows consumer-grade hardware such as GPU to mine those coins.';
+        $this->website = [
             'https://litecoin.org',
         ];
-        parent::$explorer = [
+        $this->explorer = [
             'https://chain.so/api/v2/get_address_balance/LTC/%s',
             'https://blockchair.com/litecoin',
             'https://chainz.cryptoid.info/ltc',
             'http://explorer.litecoin.net/chain/Litecoin',
         ];
-        parent::$source_code = [
+        $this->source_code = [
             'https://github.com/litecoin-project/litecoin',
         ];
+
+        return $this;
     }
 }
