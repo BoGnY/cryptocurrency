@@ -3,6 +3,7 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Build Status][ico-travis]][link-travis]
+[![Last commit][ico-commit]][link-commit]
 [![License][ico-license]][link-license]
 [![Requires PHP7.1][ico-php]][link-php]
 
@@ -138,12 +139,14 @@ This work [is licensed](LICENSE) under the [GNU GPL v3][link-license].
 [ico-version]: https://img.shields.io/packagist/v/crypto-technology/cryptocurrency.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/crypto-technology/cryptocurrency.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/crypto-technology/cryptocurrency/master.svg?style=flat-square
+[ico-commit]: https://img.shields.io/github/last-commit/crypto-technology/cryptocurrency.svg?style=flat-square
 [ico-license]: https://img.shields.io/github/license/crypto-technology/cryptocurrency.svg?style=flat-square
-[ico-php]: https://img.shields.io/badge/php-7.0-red.svg?style=flat-square
+[ico-php]: https://img.shields.io/badge/php-7.1-blue.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/crypto-technology/cryptocurrency
 [link-downloads]: https://packagist.org/packages/crypto-technology/cryptocurrency
 [link-travis]: https://travis-ci.com/crypto-technology/cryptocurrency
+[link-commit]: https://github.com/crypto-technology/cryptocurrency/commits
 [link-license]: https://www.gnu.org/licenses/gpl-3.0.en.html
 [link-php]: https://secure.php.net/downloads.php
 [link-roave]: https://github.com/Roave/SecurityAdvisories
